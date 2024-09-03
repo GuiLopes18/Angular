@@ -30,7 +30,7 @@ function contagem_regressiva(num : number) : void {
 console.log(contagem_regressiva(5));
 
 */
-
+/*
 type ingredientes = (elementos : string) => string
 
 
@@ -46,3 +46,4 @@ function feijoada(func: ingredientes, elementos : string) {
 }
 
 feijoada(preparar_feijoada, "Feijão, Arroz, Laranja, Farofa, Couve");
+*/
