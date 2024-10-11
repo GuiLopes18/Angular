@@ -9,8 +9,14 @@ class Biblioteca {
         this.livros.push(livro);
     }
 
-    consultarLivro(nome: string): Livro | null {
-        return this.livros.find(l => l.nome.toLowerCase() === nome.toLowerCase()) || null;
+    consultarLivro(nome: string): void {
+        const livroEncontrado = this.livros.find(l => l.nome.toLowerCase() === nome.toLowerCase());
+        if (livroEncontrado) {
+            console.log(`Livro encontrado: ${livroEncontrado.nome}`);
+        }
+        else {
+            console.log(`Livro não encontrado na biblioteca`);
+        }
     }
 
     deletarLivro(nome: string): void {
@@ -25,16 +31,17 @@ const biblioteca = new Biblioteca();
 
 // Adicionar livros
 biblioteca.adicionarLivro(new Livro("Harry Potter"));
-biblioteca.adicionarLivro(new Livro("O Conde de Montecristo"));
+biblioteca.adicionarLivro(new Livro("Biblioteca da Meia Noite"));
+biblioteca.adicionarLivro(new Livro("Crônicas de Gelo e Fogo"));
+biblioteca.adicionarLivro(new Livro("Castelo de Vidro"));
 
-// Consultar livro
-const livroEncontrado = biblioteca.consultarLivro("Harry Potter");
-if (livroEncontrado) {
-    console.log(`Livro encontrado: ${livroEncontrado.nome}`);
-}
-else {
-    console.log(`Livro não encontrado`)
-}
+// Consultar livros
+biblioteca.consultarLivro("harry potter");
+biblioteca.consultarLivro("Castelo de Vidro");
+biblioteca.consultarLivro("diário de um banana");
 
-// Deletar livro
-biblioteca.deletarLivro("Dom Casmurro");
+// Deletar livros
+biblioteca.deletarLivro("Castelo de Vidro");
+
+// Consultar livros deletados
+biblioteca.consultarLivro("Castelo de Vidro");
