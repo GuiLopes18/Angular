@@ -54,7 +54,8 @@ ul {
 }
 
 li {
-    background-color: #1abc9c;
+    background-color: white;
+    color: black;
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
