@@ -11,7 +11,7 @@ function addTask() {
     li.textContent = task;
 
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = "Delete";
+    deleteButton.textContent = "Deletar";
     deleteButton.addEventListener('click', () => {
         taskList.removeChild(li);
     });
